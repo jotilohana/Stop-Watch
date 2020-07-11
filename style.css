@@ -1,0 +1,35 @@
+body{
+    background-color:black;
+    text-align: center;
+    color: white;
+}
+h1{
+    display: inline-block;
+    width: 55px;
+    margin-bottom: 0;
+}
+p{
+    display: inline-block;
+    margin:0 20px;
+    font-size: 12px;
+}
+.main-heading{
+    width: 250px;
+    font-size: 50px;
+}
+img{
+    width: 150px;
+}
+.start{
+    background-color:#006400;
+}
+.pause{
+    background-color: #FFD700;
+}
+.reset{
+    background-color: red;
+}
+.reset,.start,.pause{
+    border: 2px solid white;
+    width: 100px;
+}
