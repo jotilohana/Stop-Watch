@@ -15,17 +15,17 @@ function timer(){
     if(msec>=100){
         sec++;
         getSec.innerHTML=sec;
-        msec=0;
+        msec=00;
     }
     else if(sec>=60){
         min++;
         getMin.innerHTML=min;
-        sec=0;
+        sec=00;
     }
     else if(min>=60){
         hr++;
         getHr.innerHTML=hr;
-        min=0;
+        min=00;
 
     }
 }
@@ -40,9 +40,10 @@ function pause(){
 
 
 function reset(){
-    getMin.innerHTML=0;
-    getSec.innerHTML=0;
-    getMsec.innerHTML=0;
+    getHr.innerHtml=00;
+    getMin.innerHTML=00;
+    getSec.innerHTML=00;
+    getMsec.innerHTML=00;
     pause();
 }
 
