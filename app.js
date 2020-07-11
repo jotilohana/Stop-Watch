@@ -1,4 +1,5 @@
 
+
 var interval;
 var hr=0;
 var min=0;
@@ -14,19 +15,30 @@ function timer(){
     getMsec.innerHTML=msec;
     if(msec>=100){
         sec++;
-        getSec.innerHTML=sec;
-        msec=0;
+        getSec.innerHTML=sec+" : ";
+        msec="00";
     }
     else if(sec>=60){
         min++;
-        getMin.innerHTML=min;
-        sec=0;
+        getMin.innerHTML=min+" : ";
+        sec="00";
     }
     else if(min>=60){
         hr++;
-        getHr.innerHTML=hr;
-        min=0;
-
+        getHr.innerHTML=hr+" : ";
+        min="00";
+    }
+    if(msec<10){
+        getMsec.innerHTML="0"+msec;
+    }
+    if(sec<10){
+        getSec.innerHTML="0"+sec+" : ";
+    }
+    if(min<10){
+        getMin.innerHTML="0"+min+" : ";
+    }
+    if(hr<10){
+        getHr.innerHTML="0"+hr+" : ";
     }
 }
 function start(){
@@ -40,9 +52,11 @@ function pause(){
 
 
 function reset(){
-    getMin.innerHTML=0;
-    getSec.innerHTML=0;
-    getMsec.innerHTML=0;
+    getHr.innerHTML="00 : ";
+    getMin.innerHTML="00 : ";
+    getSec.innerHTML="00 : ";
+    getMsec.innerHTML="00";
     pause();
 }
+
 
